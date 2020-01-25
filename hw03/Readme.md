@@ -1,6 +1,8 @@
 ### MQTT Topics
 In the local broker in Jetson the topic name was named ```facedetector_topic``` while in the remote server in the cloud the topic was named ```facedetector_topic_remote```. The QoS used was ```0``` all over the MQTT pipeline.
 
+### Sample Images
+Sample face images that were capture by the camera with Jetson TX2, cut from the frame, sent over the pipeline and saved in the bucket can be found in  ```saved_images```. The http link of the location of the object storage was sent in ISVC.
 
 ### Facedetector
 

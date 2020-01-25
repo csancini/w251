@@ -21,11 +21,12 @@ def on_message(client,userdata, msg):
     print("\nimage to process received")
 
     img = pickle.loads(msg.payload)
+    png = cv.imdecode(img, 0)
 
     ts = str(datetime.timestamp(datetime.now())).replace('.','-', 1)
     filename = PATH + 'frame-' + ts + '.png'
     print("Saving", filename)
-    cv.imwrite(filename, img)
+    cv.imwrite(filename, png)
 
   except:
     print("Unexpected error:", sys.exc_info()[0])

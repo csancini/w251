@@ -41,7 +41,7 @@ while(True):
     
         #encode and public message
         rc,png = cv.imencode('.png', roi_gray)
-        msg = pickle.dumps(roi_gray)
+        msg = pickle.dumps(png)
         mqtt_client.publish(LOCAL_MQTT_TOPIC, msg, qos=0, retain=False)
     
     #quit capturing

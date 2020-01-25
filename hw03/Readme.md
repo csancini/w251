@@ -14,7 +14,7 @@ python3 facedetector.py
 
 Docker image used in ```dockerfiles/mosquitto```
 ```
-sudo docker run --name mosquitto --network hw03 -p 1883:1883 -ti --rm -v /data/hw3/dockerdata:/root csancini/hw3-broker sh
+sudo docker run --name mosquitto --network hw03 -p 1883:1883 -ti --rm -v /data/hw3/dockerdata:/root csancini/hw3-mosquitto sh
 /usr/sbin/mosquitto
 ```
 
@@ -22,7 +22,7 @@ sudo docker run --name mosquitto --network hw03 -p 1883:1883 -ti --rm -v /data/h
 
 Docker image used in ```dockerfiles/mosquitto```
 ```
-sudo docker run --name forwarder --network hw03 -dti --rm -v /data/hw3/dockerdata:/root csancini/hw3-broker sh
+sudo docker run --name forwarder --network hw03 -dti --rm -v /data/hw3/dockerdata:/root csancini/hw3-mosquitto sh
 sudo docker network connect bridge forwarder
 sudo docker attach forwarder
 
@@ -34,7 +34,7 @@ python3 forwarder.py
 
 Docker image used in ```dockerfiles/mosquitto```
 ```
-sudo docker run --name remote-broker --network hw03 -p 1883:1883 -dti --rm -v /root/dockerdata:/root csancini/hw03-remote-broker sh
+sudo docker run --name remote-broker --network hw03 -p 1883:1883 -dti --rm -v /root/dockerdata:/root csancini/hw3-mosquitto sh
 sudo docker network connect bridge remote-broker
 sudo docker exec -it remote-broker /usr/sbin/mosquitto
 ```
@@ -43,7 +43,7 @@ sudo docker exec -it remote-broker /usr/sbin/mosquitto
 
 Docker image used in ```dockerfiles/image-processor```
 ```
-sudo docker run --name image-processor --network hw03 -ti --rm -v /root/dockerdata:/root -v /mnt/mybucket:/root/mybucket csancini/hw03-image-processor sh
+sudo docker run --name image-processor --network hw03 -ti --rm -v /root/dockerdata:/root -v /mnt/mybucket:/mnt/mybucket csancini/hw3-image-processor sh
 
 cd ~
 python3 image-processor.py

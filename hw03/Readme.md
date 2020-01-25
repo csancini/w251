@@ -18,8 +18,6 @@ python3 facedetector.py
 
 
 The docker image used for the local broker container  can be found in ```dockerfiles/mosquitto```. The service was start and monitored in the shell terminal only.
-
-Docker image used in ```dockerfiles/mosquitto```
 ```
 sudo docker run --name mosquitto --network hw03 -p 1883:1883 -ti --rm -v /data/hw3/dockerdata:/root csancini/hw3-mosquitto sh
 /usr/sbin/mosquitto

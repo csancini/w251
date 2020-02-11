@@ -1,0 +1,4 @@
+Found 3670 images belonging to 5 classes.
+First - class: daisy, probability: 71.91%
+Second - class: sunflowers, probability: 13.51%
+Third - class: dandelion, probability: 8.01%

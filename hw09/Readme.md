@@ -9,7 +9,7 @@
 **No. The evaluation loss and the training loss were still droping at the step 50,000.**  
 
 3. Were you overfitting?  
-**No. The evaluation loss and the training loss were still droping together. The last values at 49990 were 1.6963 for the training loss and 1.6923 for the evaluation loss.**   
+**No. The evaluation loss and the training loss were still droping together. The last loss values computed were 1.6963 for training loss and 1.6923 validation.**   
 
 4. Were your GPUs fully utilized?  
 **They were utilized in uneven peaks, but with a high utilization overall.**  
@@ -18,7 +18,7 @@
 **Yes. The nmon showed that Recv and Trans were at ~440Mb most of the time.**  
 
 6. Take a look at the plot of the learning rate and then check the config file. Can you explan this setting?  
-**The plot has a sharp increase in the begining and then a slow decay takes place. This is due to the "warmup_steps:8000" which tells the optimizer to increase the learning rate linearly without decay in the first 8000 steps.**  
+**The plot has a sharp increase in the begining and then a slow decay takes place. This is due to the "warmup_steps:8000" configuration which tells the optimizer to increase the learning rate linearly without decay in the first 8000 steps.**  
 
 7. How big was your training set (mb)? How many training lines did it contain?  
 **The raw (before data preparation) training set is composed of two files, one for german and one for english, with 695.4MB and 621.6MB respectively. Both files have 4,524,868 lines.**

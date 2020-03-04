@@ -42,7 +42,7 @@
 **To update the gradients of the model during the training data must be exchanged between the nodes for the computations. Therefore, the high step time of almost 1 second is due to network limitations of the communication between nodes.** 
 
 #### Tensorboard training progress
-Training log file: [nohup.out](https://github.com/NVIDIA/OpenSeq2Seq/)
+Training log file: [nohup.out](nohup.out)
 
 #### Tensorboard training progress
 

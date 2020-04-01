@@ -30,4 +30,4 @@
     ```
 
 4. Submit the list of files you that your LazyNLP spiders crawled (ls -la)  
-**[Ouput](output.txt) of ls -la.**  
+**The output of 'ls -la' with the list of downloaded files can be found in the [output file](results.txt).**  

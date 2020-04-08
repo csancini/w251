@@ -3,8 +3,7 @@
 #### Questions
 
 1. How much disk space is used after step 4?  
-
-**After x hours running the disk space used was y.**   
+**After 4 hours running the crawler, the disk space used was 550M.**   
 
 2. Did you parallelize the crawlers in step 4? If so, how?  
 **I started multiple crawlers, each with a subset of the 10M 188 files with deduplicated web pages (see below). The crawler.py was changed to receive the name of the file as paramenter. Then I used regex to create multiple commands in my local computer and executed them all. Example:**  
@@ -31,4 +30,4 @@
     ```
 
 4. Submit the list of files you that your LazyNLP spiders crawled (ls -la)  
-**[Ouput](output.txt) of ls -la.**  
+**The output of 'ls -la' with the list of downloaded files can be found in the [output file](results.txt).**  
